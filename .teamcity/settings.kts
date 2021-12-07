@@ -41,14 +41,14 @@ project {
     val settingsVcs = GitVcsRoot {
         id("TeamcitySettings")
         name = "teamcity-settings"
-        url = "https://github.com/rodm/teamcity-settings"
+        url = "https://github.com/balajikammili/teamcity-settings"
     }
     vcsRoot(settingsVcs)
 
     features {
         githubIssueTracker {
             displayName = "GradleTeamCityPlugin"
-            repository = "https://github.com/rodm/gradle-teamcity-plugin"
+            repository = "https://github.com/balajikammili/gradle-teamcity-plugin"
             pattern = """#(\d+)"""
         }
     }
@@ -60,13 +60,14 @@ project {
     val vcs = GitVcsRoot {
         id("GradleTeamcityPlugin")
         name = "gradle-teamcity-plugin"
-        url = "https://github.com/rodm/gradle-teamcity-plugin.git"
+        url = "https://github.com/balajikammili/gradle-teamcity-plugin.git"
     }
     vcsRoot(vcs)
 
     val buildTemplate = template {
         id("Build")
         name = "build"
+        
 
         vcs {
             root(vcs)

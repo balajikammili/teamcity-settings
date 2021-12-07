@@ -83,6 +83,19 @@ project {
                 enableStacktrace = true
                 jdkHome = "%java.home%"
             }
+            script{
+                id = "Script_Test"
+                scriptContent = "echo `gradle --version` && echo `ls ~/.gradle/wrapper/dists`"
+            }
+            gradle{
+                id = "GRADLE_STEP2"
+                tasks = "build"
+                radleParams = "%gradle.opts%"
+                useGradleWrapper = true
+                gradleWrapperPath = ""
+                enableStacktrace = true
+                jdkHome = "%java.home%"
+            }
         }
 
         failureConditions {

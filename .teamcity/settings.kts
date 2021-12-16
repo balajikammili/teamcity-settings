@@ -85,10 +85,12 @@ project {
             }
             script{
                 id = "Script_Test"
+                name = "export_java"
                 scriptContent = "export JAVA_HOME="usr/lib/jvm/java-1.8.0-openjdk-amd64""
             }
             script{
                 id = "Script_Test2"
+                name = "print_java"
                 scriptContent = "echo $JAVA_HOME"
             }
             gradle{

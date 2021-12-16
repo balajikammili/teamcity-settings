@@ -85,7 +85,11 @@ project {
             }
             script{
                 id = "Script_Test"
-                scriptContent = "echo `gradle --version` && echo `ls ~/.gradle/wrapper/dists`"
+                scriptContent = "export JAVA_HOME="usr/lib/jvm/java-1.8.0-openjdk-amd64""
+            }
+            script{
+                id = "Script_Test2"
+                scriptContent = "echo $JAVA_HOME"
             }
             gradle{
                 id = "GRADLE_STEP2"
